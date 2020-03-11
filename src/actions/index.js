@@ -13,5 +13,15 @@ const errorGetUsers = err => {
 export const getUsers = () => {
   return (dispatch, getState) => {
     dispatch(startGetUsers());
+    http
+      .get("users/")
+      .then(response => {
+        if (response.data) {
+          dispatch(comleteGetUsers(response.data));
+        }
+      })
+      .catch(err => {
+        dispatch(errorGetUsers(err));
+      });
   };
 };

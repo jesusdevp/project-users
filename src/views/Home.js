@@ -8,6 +8,7 @@ export class Home extends Component {
     this.props.getUsers();
   }
   render() {
+    console.log(this.props);
     return (
       <div>
         <h2>Home</h2>
