@@ -1,6 +1,12 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { getUsers } from "../actions";
 
 export class Home extends Component {
+  componentWillMount() {
+    this.props.getUsers();
+  }
   render() {
     return (
       <div>
@@ -10,4 +16,19 @@ export class Home extends Component {
   }
 }
 
-export default Home;
+function mapStateToProps(state) {
+  return {
+    users: state.getUsers
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(
+    {
+      getUsers
+    },
+    dispatch
+  );
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
