@@ -16,6 +16,9 @@ export class Home extends Component {
   }
 }
 
+//Esta funcion convierte el valor de la store que yo quiero
+// en propiedades para el componente
+
 function mapStateToProps(state) {
   return {
     users: state.getUsers

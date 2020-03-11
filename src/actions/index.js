@@ -1,7 +1,17 @@
 import http from "./http";
 
+const startGetUsers = () => {
+  return { type: "START_GET_USERS", ready: false };
+};
+const comleteGetUsers = data => {
+  return { type: "COMPLETE_GET_USERS", data };
+};
+const errorGetUsers = err => {
+  return { type: "ERROR_GET_USERS", err };
+};
+
 export const getUsers = () => {
   return (dispatch, getState) => {
-    console.log("getUsers called to action");
+    dispatch(startGetUsers());
   };
 };
