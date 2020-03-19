@@ -1,12 +1,26 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { Redirect } from "react-router";
 import "materialize-css";
 
 class UserItem extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isRedirected: false
+    };
+    this.onClick = this.onClick.bind(this);
+  }
+  onClick(e) {
+    this.setState({ isRedirected: true });
+  }
   render() {
     const { name, lastName, id, facebook } = this.props;
+    if (this.state.isRedirected) {
+      return <Redirect to={"/detail/" + id} />;
+    }
     return (
-      <div className="card">
+      <div className="card" onClick={this.onClick}>
         <div className="card-content">
           <div className="UserItem-leftBox">
             <img
