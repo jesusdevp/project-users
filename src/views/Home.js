@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { getUsers } from "../actions";
 
+import { BounceLoader } from "react-spinners";
+
 import UserItem from "../components/UserItem";
 
 import "./index.css";
@@ -29,6 +31,13 @@ export class Home extends Component {
           />
         );
       });
+    }
+    if (this.props.users.type === "START_GET_USERS") {
+      return (
+        <div className="Home-preLoader">
+          <BounceLoader color="#FFF" loading={true} />
+        </div>
+      );
     }
     return <div className="Home">{users}</div>;
   }
