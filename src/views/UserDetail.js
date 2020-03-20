@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { getUserById } from "../actions";
 import UserDetailCover from "../components/UserDetailCover";
+import UserDetailBody from "../components/UserDetailBody";
 
 class UserDetail extends Component {
   componentWillMount() {
@@ -13,6 +14,7 @@ class UserDetail extends Component {
     return (
       <div>
         <UserDetailCover />
+        <UserDetailBody />
       </div>
     );
   }

@@ -7,6 +7,11 @@
   background-color: #79affa;
 }
 
+.UserDetailBody {
+  background-color: #5e9dd4;
+  height: 50vh;
+}
+
 .UserDetailCover-img {
   height: 125px;
   width: 125px;
