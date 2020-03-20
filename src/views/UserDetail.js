@@ -10,13 +10,16 @@ class UserDetail extends Component {
     this.props.getUserById(this.props.match.params.userId);
   }
   render() {
-    console.log(this.props.userDetail);
-    return (
-      <div>
-        <UserDetailCover />
-        <UserDetailBody />
-      </div>
-    );
+    if (this.props.userDetail.data) {
+      const { name, lastName, messages } = this.props.userDetail.data;
+      return (
+        <div>
+          <UserDetailCover firstName={name} lastName={lastName} />
+          <UserDetailBody messages={messages} />
+        </div>
+      );
+    }
+    return <div></div>;
   }
 }
 
