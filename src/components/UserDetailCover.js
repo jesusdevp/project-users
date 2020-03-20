@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import "./index.css";
+import Gravatar from "./Gravatar";
+import "./Styles/index.css";
 
 class UserDetailCover extends Component {
   constructor() {
@@ -14,9 +15,9 @@ class UserDetailCover extends Component {
     const { firstName, lastName } = this.props;
     return (
       <div className="UserDetailCover">
-        <img
-          src={this.state.cover}
+        <Gravatar
           className="UserDetailCover-img"
+          name={this.props.firstName}
           alt="avatar"
         />
         <div>

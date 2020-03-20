@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Route, Router } from "react-router";
-import PropTypes from "prop-types";
+
+import Layout from "./components/Layout";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import "./App.css";
 
@@ -10,18 +11,16 @@ import UserDetail from "./views/UserDetail";
 class App extends Component {
   render() {
     return (
-      <Router history={this.props.history}>
-        <div className="App">
-          <Route exact path="/" component={Home} />
-          <Route exact path="/detail/:userId" component={UserDetail} />
-        </div>
-      </Router>
+      <BrowserRouter>
+        <Layout>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/detail/:userId" component={UserDetail} />
+          </Switch>
+        </Layout>
+      </BrowserRouter>
     );
   }
 }
-
-App.propTypes = {
-  history: PropTypes.any.isRequired
-};
 
 export default App;

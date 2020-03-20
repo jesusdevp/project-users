@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./index.css";
+import "./Styles/index.css";
 import PropTypes from "prop-types";
 
 class UserPost extends Component {

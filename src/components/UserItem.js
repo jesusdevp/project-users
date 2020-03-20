@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Redirect } from "react-router";
+import Gravatar from "./Gravatar";
 import "materialize-css";
 
 class UserItem extends Component {
@@ -23,10 +24,10 @@ class UserItem extends Component {
       <div className="card" onClick={this.onClick}>
         <div className="card-content">
           <div className="UserItem-leftBox">
-            <img
+            <Gravatar
               className="UserItem-image"
-              src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"
-              alt="profile"
+              name={this.props.name}
+              alt="avatar"
             />
           </div>
           <div className="UserItem-rightBox">
