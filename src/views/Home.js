@@ -10,10 +10,7 @@ import UserItem from "../components/UserItem";
 import "./index.css";
 import "materialize-css/dist/css/materialize.min.css";
 
-export class Home extends Component {
-  constructor() {
-    super();
-  }
+class Home extends Component {
   componentWillMount() {
     this.props.getUsers();
   }
