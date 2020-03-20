@@ -13,7 +13,7 @@ class App extends Component {
       <Router history={this.props.history}>
         <div className="App">
           <Route exact path="/" component={Home} />
-          <Route exact path="detail/:userId" component={UserDetail} />
+          <Route exact path="/detail/:userId" component={UserDetail} />
         </div>
       </Router>
     );

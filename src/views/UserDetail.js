@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 
 class UserDetail extends Component {
+  componentWillMount() {
+    console.log(this.props.match.params.id);
+  }
   render() {
     return (
       <div>
