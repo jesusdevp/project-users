@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { getUserById } from "../actions";
+import UserDetailCover from "../components/UserDetailCover";
 
 class UserDetail extends Component {
   componentWillMount() {
@@ -11,7 +12,7 @@ class UserDetail extends Component {
     console.log(this.props.userDetail);
     return (
       <div>
-        <h2>Hola</h2>
+        <UserDetailCover />
       </div>
     );
   }
