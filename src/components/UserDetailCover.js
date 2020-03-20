@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import "./index.css";
 
 class UserDetailCover extends Component {
@@ -10,6 +11,7 @@ class UserDetailCover extends Component {
     };
   }
   render() {
+    const { firstName, lastName } = this.props;
     return (
       <div className="UserDetailCover">
         <img
@@ -17,9 +19,17 @@ class UserDetailCover extends Component {
           className="UserDetailCover-img"
           alt="avatar"
         />
+        <div>
+          <h2 className="UserDetailCover-name">{firstName + " " + lastName}</h2>
+        </div>
       </div>
     );
   }
 }
+
+UserDetailCover.propTypes = {
+  firstName: PropTypes.string.isRequired,
+  lastName: PropTypes.string.isRequired
+};
 
 export default UserDetailCover;

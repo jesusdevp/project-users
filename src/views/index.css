@@ -10,7 +10,8 @@ body {
 }
 
 .card-content {
-  display: flex !important;
+  display: flex;
+  background-color: rgb(210, 226, 224);
 }
 
 .card {
@@ -36,7 +37,12 @@ body {
 }
 
 .UserItem-image {
+  height: 150px;
   width: 150px;
+  background-repeat: no-repeat;
+  background-position: 100%;
+  border-radius: 150%;
+  background-size: 100%;
 }
 
 .UserItem-name {

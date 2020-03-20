@@ -6,9 +6,11 @@ class UserPost extends Component {
   render() {
     const { title, message } = this.props;
     return (
-      <div className="UsePost">
-        <h1>{title}</h1>
-        <h2>{message}</h2>
+      <div className="UserPost-content">
+        <div className="UserPost">
+          <h1>{title}</h1>
+          <h2>{message}</h2>
+        </div>
       </div>
     );
   }

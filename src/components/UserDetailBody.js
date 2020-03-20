@@ -21,7 +21,11 @@ class UserDetailBody extends Component {
         />
       );
     });
-    return <div className="UserDetailBody">{messages}</div>;
+    return (
+      <div className="UserDetailBody">
+        <div>{messages}</div>
+      </div>
+    );
   }
 }
 

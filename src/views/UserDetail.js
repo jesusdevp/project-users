@@ -11,10 +11,10 @@ class UserDetail extends Component {
   }
   render() {
     if (this.props.userDetail.data) {
-      const { name, lastName, messages } = this.props.userDetail.data;
+      const { name, last_name, messages } = this.props.userDetail.data;
       return (
         <div>
-          <UserDetailCover firstName={name} lastName={lastName} />
+          <UserDetailCover firstName={name} lastName={last_name} />
           <UserDetailBody messages={messages} />
         </div>
       );
