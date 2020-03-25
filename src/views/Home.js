@@ -11,7 +11,7 @@ import "./index.css";
 import "materialize-css/dist/css/materialize.min.css";
 
 class Home extends Component {
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.props.getUsers();
   }
   render() {

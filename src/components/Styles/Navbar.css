@@ -14,21 +14,15 @@
   align-items: center;
 }
 
-.Navbar__brand:hover {
-  color: #ffffff;
-  text-decoration: none;
-}
-
 .Navbar__brand-logo {
-  width: 160px;
-  height: 160px;
-  margin: 0em 0.5em 0.5em 1em;
-  z-index: 1;
+  width: 200px;
+  height: 200px;
+  margin: 0;
 }
 
-.font-weight-light {
+#menu {
   display: flex;
-  text-align: center;
-  font-size: 2em;
-  font-family: "Montserrat", sans-serif;
+  justify-content: center;
+  font-size: 50px;
+  color: white;
 }
